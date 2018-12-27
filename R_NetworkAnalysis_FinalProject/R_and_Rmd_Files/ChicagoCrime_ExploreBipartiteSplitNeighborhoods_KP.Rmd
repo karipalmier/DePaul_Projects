@@ -1,0 +1,143 @@
+---
+title: "CSC 495 Final Project ExploreBipartiteSplitNeighborhoods.Rmd"
+author: "Kari Palmier"
+date: "6/2/2018, Spring 2018"
+output: html_document
+---
+
+```{r}
+library(knitr)
+setwd("C:\\DePaulCoursework\\Spring CSC 495\\Project\\")
+read_chunk("ChicagoCrime_ExploreBipartiteSplitNeighborhoods.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Description
+The file performs analysis on the bipartite neighborhood projections of the violent and non-violent Feb 2017 Chicago Crime datasets.  The first step is to create the bipartite projections of both the violent and non-violent graph data.  Next the projections were filtered so that edge weights below given thresholds were removed.  After that any singleton nodes were removed.  Finally the giant component of the final networks were extracted.  Weighted degree, assortativity, transitivity, and modularity analyses were then performed on the giant components of the both networks.
+
+# Load the libraries and data
+
+
+```{r C1, results="hide", warning=FALSE, message=FALSE}
+```
+
+
+```{r C2}
+```
+
+# Summarize initial data
+
+
+```{r C3}
+```
+
+# Create bipartite neighborhood projections
+
+```{r C4}
+```
+
+# Remove unrelated node attributes
+
+
+```{r C5}
+```
+
+# Calculate initial densities
+
+
+```{r C6}
+```
+
+# Calculate initial number of components
+
+```{r C7}
+```
+
+# Summarize initial edge weights
+
+
+```{r C8}
+```
+
+# Plot initial graphs
+
+
+```{r C9}
+```
+
+
+# Create Edge Weight plots to use for filtering
+
+
+```{r C10}
+```
+
+# Filter edges by percent of edges to eliminate
+Initially filtered edges by values extracted from the histograms.  This provided an initial idea of how many edges may need to be filtered.  In order to get more precise filtering thresholds, a number of different of filtering percentages were performed (edges below the edge weight percentile value corresponding to the percentage were removed).  Analyses of the assortativity, transitivity, and modularity of the filtered networks (as well as the Gephi plots of the networks) were performed to determine which percentages should be used in the final filtering steps.   
+
+
+```{r C11}
+```
+
+# Initial Weighted Degree plots
+
+
+```{r C12}
+```
+
+
+# Singleton node removal
+
+
+```{r C13}
+```
+
+# Decomposition and summary of filtered networks
+
+
+```{r C14}
+```
+
+# Violent crime projection assortativity analysis
+
+
+```{r C15}
+```
+
+# Non-violent crime projection assortativity analysis
+
+
+```{r C16}
+```
+
+# Violent crime projection transitivity analysis
+
+
+```{r C17,  warning=FALSE}
+```
+
+# Non-violent crime projection transitivity analysis
+
+
+```{r C18,  warning=FALSE}
+```
+
+# Violent crime projection modularity analysis
+
+
+```{r C19}
+```
+
+# Non-violent crime projection modularity analysis
+
+
+```{r C20}
+```
+
+# Save final networks in graphml format
+
+
+```{r C21}
+```
+
+
